@@ -5,7 +5,8 @@ const path = require('path');
 const app = express();
 
 // Db connection
-const { mongoose } = require('./database');
+const { mongoose } = require('./drivers_database/driver_MongoDB');
+const { mysql } = require('./drivers_database/driverMysql')
 
 // Settings 
 app.set('port', process.env.PORT || 3000);
